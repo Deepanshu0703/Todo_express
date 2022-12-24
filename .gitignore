@@ -1,0 +1,15 @@
+#includes files that i should not upload on github repository
+
+
+node_modules/
+bower_components/
+dist/
+tmp/
+vendor/
+.idea/
+*.iml
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*.swn

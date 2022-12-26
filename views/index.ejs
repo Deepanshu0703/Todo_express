@@ -12,11 +12,14 @@
     <h1><%=day%></h1>
     </div>
     <div class="container">
-        <ul> 
+        <ul>
             <% for(let i=0;i<items.length;i++){ %>
-                <li><input type="checkbox" class="checkbox" ><%=items[i]%></li>
+                <form action="/delete" method="POST">
+                    <li><input type="checkbox" name="checkbox" value="<%= items[i]._id %>"  id="checkbox" onchange="this.form.submit()">
+                    <%=items[i].name%></li>
+                    </form>
             <% } %>
-        </ul>
+        
         <form action="/" method="POST">
             <input type="text" name="item" class="Add_item"placeholder="Add a new item" required>
             <button >+</button>
